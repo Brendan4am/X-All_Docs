@@ -8,9 +8,13 @@ Last updated: March 2026
 
 ---
 
-# Layer 1 — Collect Reason
+# Layer 1 — Ask Why
 
-> L1 macro pending.
+Customer has requested a refund but has not provided a reason. L1 asks for one. No offers. No troubleshooting. Universal across all product tracks.
+
+### Reason Collection
+
+Before I take any action on your order, could you let me know a bit more about what's prompting your refund request? That way I can make sure we address the right thing and find the best path forward for you.
 
 ---
 

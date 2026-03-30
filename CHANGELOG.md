@@ -6,6 +6,27 @@ Format: `## YYYY-MM-DD — [SCOPE] Summary`
 
 ---
 
+## 2026-03-30 — [MULTI] Duplicate L1 Ask Why macro across all product tracks
+
+**File(s) changed:** 12 files across 6 product track subfolders (active-responses + response-library for each), `CHANGELOG.md`
+**Changed by:** AI Agent (Claude, acting as proxy for Brendan)
+
+### What changed
+- Updated all 6 remaining product track scaffolds (air-pure-purifier, dishwasher-cleaner, multi-purpose-spray, power-scrubber, subscription, washing-machine-cleaner)
+- Renamed "Layer 1 — Collect Reason" to "Layer 1 — Ask Why" to match toilet cleaner and architecture doc
+- Replaced L1 placeholder with full macro content (universal reason collection prompt)
+- Active-responses files: 1 active L1 macro each (Option A — Warm)
+- Response-library files: 4 L1 options each (A Warm active, B Concise reserve, C Guided reserve, D Reformatted Original reserve)
+- L1 Option C adapted for universal use: references "your X-All product" instead of a specific product name
+
+### Why
+L1 is universal across all product tracks — same reason collection macro regardless of product. Duplicating into each track keeps every product file self-contained.
+
+### Review flags
+[None]
+
+---
+
 ## 2026-03-30 — [MULTI] Duplicate L4 Partial Resolution and L5 Terminal Resolution into all product tracks
 
 **File(s) changed:** 12 files across 6 product track subfolders (active-responses + response-library for each), `CHANGELOG.md`

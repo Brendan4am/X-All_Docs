@@ -8,9 +8,29 @@ Last updated: March 2026
 
 ---
 
-# Layer 1 — Collect Reason
+# Layer 1 — Ask Why
 
-> L1 is shared across all tracks. See the active L1 macro in any track's active responses file.
+Customer has requested a refund but has not provided a reason. L1 asks for one. No offers. No troubleshooting. Universal across all product tracks.
+
+### Reason Collection
+
+**Option A — Warm** `ACTIVE`
+
+Before I take any action on your order, could you let me know a bit more about what's prompting your refund request? That way I can make sure we address the right thing and find the best path forward for you.
+
+**Option B — Concise** `RESERVE`
+
+Before I process anything on your order, could you share a bit more about the reason for your refund request? I want to make sure we handle this the right way.
+
+**Option C — Guided** `RESERVE`
+
+Before I take any action on your order, could you share what's going on with your X-All product? Whether it's a performance concern, a scent issue, or something else — knowing the details will help me make sure we get this right for you.
+
+**Option D — Reformatted Original** `RESERVE`
+
+To find the best path forward on your order, could you share a bit more about why you'd like a refund? Common examples include product performance concerns, scent or sensitivity issues, or something else entirely.
+
+Knowing the details will help make sure this gets resolved the right way.
 
 ---
 
