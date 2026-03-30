@@ -72,6 +72,33 @@ Document the decision and enforce it across all macros. Inconsistency in product
 
 If a fact about the product (pricing, features, capabilities, policies) is not in the knowledge base or confirmed by the user in the current session, do not include it. Do not invent billing statement names, refund timelines, feature capabilities, or policy details. When in doubt, flag it and ask.
 
+### Scannability & Emphasis Formatting
+
+Customers scan before they read. Macros that contain multiple steps, tips, or value propositions should be formatted so the key takeaway of each item is immediately visible without reading the full text.
+
+**Recommended default pattern:**
+
+For troubleshooting steps (typically L2), use numbered lists with bold action leads followed by a colon and supporting detail:
+
+```
+1. **Bold action or takeaway:** supporting explanation that gives the customer context on why this step matters or how to do it.
+```
+
+For value propositions and product feature lists (typically L2 default, L3), use bullet points with bold leads:
+
+```
+• **Bold benefit or item name:** supporting detail or specification
+```
+
+**Why this matters:** Bold leads let customers extract the core message at a glance. The supporting text after the colon gives depth for customers who want it. This structure also helps the formatting agent render cleanly across email, chat, and helpdesk UIs.
+
+**When not to use this pattern:**
+- L1 (reason collection) — these are short, conversational prompts. Formatting adds unnecessary weight.
+- Terminal resolution — confirmations should be clean and direct. Bullet-pointed value pitches are wrong for the tone.
+- Any macro under 3 sentences — formatting overhead outweighs the scannability benefit.
+
+**Prefer colons over em-dashes** as the separator between bold leads and supporting text. Colons read as structured and intentional. Em-dashes read as conversational asides, which works in prose but undermines the structured feel of a formatted list.
+
 ---
 
 ## Default Layer Architecture

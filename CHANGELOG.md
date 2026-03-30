@@ -6,6 +6,25 @@ Format: `## YYYY-MM-DD — [SCOPE] Summary`
 
 ---
 
+## 2026-03-30 — [SKILLS] Add Scannability & Emphasis Formatting section to cs-macro-standards
+
+**File(s) changed:** `skills/cs-macro-standards/references/writing-best-practices.md`
+**Changed by:** AI Agent (Claude, acting as proxy for Brendan)
+
+### What changed
+- Added new subsection "Scannability & Emphasis Formatting" to `writing-best-practices.md` under Macro Structural Rules
+- Recommends bold-lead formatting for troubleshooting steps (numbered lists with bold action leads + colon + supporting detail) and value-prop bullets (bold benefit + colon + specification)
+- Advises colons over em-dashes as separators between bold leads and supporting text
+- Documents when NOT to use the pattern: L1 reason collection, terminal resolution, any macro under 3 sentences
+
+### Why
+Codifies the bold-lead formatting patterns used successfully in the X-All Foaming Toilet Cleaner macro build session. Framed as recommended default (not required) to prevent over-application.
+
+### Review flags
+[None]
+
+---
+
 ## 2026-03-30 — [STRUCT] Reorganize refund-pushback into per-product subfolders
 
 **File(s) changed:** `README.md`, `refund-pushback/README.md`, `refund-pushback/xall-architecture.md`, `CHANGELOG.md`, and all 14 product track files (moved)
