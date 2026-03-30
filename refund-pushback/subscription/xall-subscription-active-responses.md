@@ -20,15 +20,41 @@ Last updated: March 2026
 
 ---
 
-# Layer 3+ — Retention Offers
+# Layer 3 — Save Sale (Retention Offers)
 
-> Retention offer macros pending. Will be populated when subscription track is built out.
+> L3 macros pending. Will be populated when this product track is built out.
 
 ---
 
-# Terminal Layer — Resolution
+# Layer 4 — Partial Resolution
 
-> Terminal resolution macros pending. Will be populated when subscription track is built out.
+L4 fires when L3 has been served and declined. The goal is to offer a partial refund as the final retention attempt before full refund. This layer is universal across all product tracks.
+
+## 50% Partial Refund (Keep Product)
+
+One last thing before I process the return. I want to make sure you're aware of what's involved so there are no surprises:
+
+• **30-day return window** from date of delivery
+• **$4.95 reprocessing fee** deducted from refund
+• **Original shipping costs** deducted from refund
+• **Return postage** is the customer's responsibility
+• Full policy details: [X-All Return Policy](https://x-all.com/pages/return-policy)
+
+That said, I'd like to offer you an alternative that skips all of that:
+
+• **50% refund** processed back to your original payment method
+• **No $4.95 reprocessing fee**
+• **No return shipping costs**
+• **Keep the product** — no need to send anything back
+• **Refund typically appears within 1–10 business days** depending on your bank or card provider
+
+You save time, avoid the extra costs, and still get money back — without the hassle of returning the order. If this works for you, just reply **YES** and I'll process the refund right away.
+
+---
+
+# Layer 5 — Terminal Resolution
+
+> L5 macros pending. Terminal resolution is handled by a human agent, not Nova.
 
 ---
 
@@ -36,7 +62,7 @@ Last updated: March 2026
 
 | Placeholder | Layer | Description |
 |---|---|---|
-| `[REFUND_AMOUNT]` | Terminal | Full refund amount — calculated by the system at runtime |
+| `[REFUND_AMOUNT]` | L5 | Full refund amount — calculated by the system at runtime |
 
 ---
 

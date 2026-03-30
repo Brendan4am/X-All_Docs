@@ -6,6 +6,28 @@ Format: `## YYYY-MM-DD — [SCOPE] Summary`
 
 ---
 
+## 2026-03-30 — [MULTI] Duplicate L4 Partial Resolution and L5 Terminal Resolution into all product tracks
+
+**File(s) changed:** 12 files across 6 product track subfolders (active-responses + response-library for each), `CHANGELOG.md`
+**Changed by:** AI Agent (Claude, acting as proxy for Brendan)
+
+### What changed
+- Updated all 6 remaining product track scaffolds (air-pure-purifier, dishwasher-cleaner, multi-purpose-spray, power-scrubber, subscription, washing-machine-cleaner)
+- Renamed "Layer 3+ — Retention Offers" to "Layer 3 — Save Sale (Retention Offers)" with pending placeholder
+- Added Layer 4 — Partial Resolution with full macro content (50% refund + keep product, universal across all tracks)
+- Renamed "Terminal Layer — Resolution" to "Layer 5 — Terminal Resolution" with pending placeholder
+- Updated Approved Dynamic Placeholders: `[REFUND_AMOUNT]` layer reference changed from "Terminal" to "L5"
+- Active-responses files: 1 active L4 macro each
+- Response-library files: 4 L4 options each (A active, B/C/D reserve)
+
+### Why
+L4 and L5 are universal across all product tracks. Duplicating into each track keeps every product file self-contained per Approach B architecture decision. Each product track now has the complete 5-layer structure (L1–L2 pending product-specific content, L3 pending, L4 populated, L5 pending).
+
+### Review flags
+[None]
+
+---
+
 ## 2026-03-30 — [MULTI] Add L4 Partial Resolution and L5 Terminal Resolution; update architecture from 4-layer to 5-layer
 
 **File(s) changed:** `refund-pushback/xall-architecture.md`, `refund-pushback/foaming-toilet-cleaner/xall-toilet-active-responses.md`, `refund-pushback/foaming-toilet-cleaner/xall-toilet-response-library.md`, `CHANGELOG.md`
