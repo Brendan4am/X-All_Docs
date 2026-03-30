@@ -12,6 +12,20 @@ This folder contains all documentation for the X-All refund pushback system. Fil
 |---|---|
 | `xall-architecture.md` | System design reference — layer flow, routing logic, customer paths, macro rules |
 | `xall-classification-prompt.md` | Top-level classifier prompt — routes customer intent to Product Refund, Subscription, or Fallback |
+| `xall-toilet-response-library.md` | Full option library — Foaming Toilet Cleaner track |
+| `xall-toilet-active-responses.md` | Deployed macros — Foaming Toilet Cleaner track |
+| `xall-spray-response-library.md` | Full option library — Multi-Purpose Spray track |
+| `xall-spray-active-responses.md` | Deployed macros — Multi-Purpose Spray track |
+| `xall-washer-response-library.md` | Full option library — Washing Machine Cleaner track |
+| `xall-washer-active-responses.md` | Deployed macros — Washing Machine Cleaner track |
+| `xall-dishwasher-response-library.md` | Full option library — Dishwasher Cleaner track |
+| `xall-dishwasher-active-responses.md` | Deployed macros — Dishwasher Cleaner track |
+| `xall-scrubber-response-library.md` | Full option library — Power Scrubber track |
+| `xall-scrubber-active-responses.md` | Deployed macros — Power Scrubber track |
+| `xall-airpure-response-library.md` | Full option library — Air Pure Purifier track |
+| `xall-airpure-active-responses.md` | Deployed macros — Air Pure Purifier track |
+| `xall-subscription-response-library.md` | Full option library — Subscription track |
+| `xall-subscription-active-responses.md` | Deployed macros — Subscription track |
 
 ---
 
@@ -80,7 +94,25 @@ The following values require **explicit human confirmation** before any change. 
 
 ## Synced File Pairs
 
-None currently designated. As the response library and active responses files are created, synced pairs will be documented here.
+Each product track and the subscription track has a synced pair. Always edit the **response library first**, then propagate to the active responses file in the same commit.
+
+| Source File (Library) | Synced Copy (Active) | Sync Rule |
+|---|---|---|
+| `xall-toilet-response-library.md` | `xall-toilet-active-responses.md` | Active responses are a subset of the library. When macros change in the library, update the active file to match. |
+| `xall-spray-response-library.md` | `xall-spray-active-responses.md` | Same as above. |
+| `xall-washer-response-library.md` | `xall-washer-active-responses.md` | Same as above. |
+| `xall-dishwasher-response-library.md` | `xall-dishwasher-active-responses.md` | Same as above. |
+| `xall-scrubber-response-library.md` | `xall-scrubber-active-responses.md` | Same as above. |
+| `xall-airpure-response-library.md` | `xall-airpure-active-responses.md` | Same as above. |
+| `xall-subscription-response-library.md` | `xall-subscription-active-responses.md` | Same as above. |
+
+### Macro content rules
+
+- When changing which option is active: update both files in the same commit. Change the marker in the library, swap the macro in the active file.
+- When editing the text of an active macro: update both files in the same commit.
+- When adding or editing a reserve option: update the library file only.
+- Consult the cs-macro-standards skill before making any content changes.
+- Currently approved dynamic placeholders: `[REFUND_AMOUNT]` (Terminal Layer)
 
 ---
 

@@ -6,6 +6,31 @@ Format: `## YYYY-MM-DD — [SCOPE] Summary`
 
 ---
 
+## 2026-03-30 — [PUSHBACK] Add per-product response library and active responses scaffolds
+
+**File(s) changed:** `refund-pushback/README.md`, `README.md`, `CHANGELOG.md`, and 14 new files
+**Changed by:** AI Agent (Claude, acting as proxy for Brendan)
+
+### What changed
+- Created response library + active responses file pair for each of 7 tracks:
+  - `xall-toilet-response-library.md` / `xall-toilet-active-responses.md` (Foaming Toilet Cleaner)
+  - `xall-spray-response-library.md` / `xall-spray-active-responses.md` (Multi-Purpose Spray)
+  - `xall-washer-response-library.md` / `xall-washer-active-responses.md` (Washing Machine Cleaner)
+  - `xall-dishwasher-response-library.md` / `xall-dishwasher-active-responses.md` (Dishwasher Cleaner)
+  - `xall-scrubber-response-library.md` / `xall-scrubber-active-responses.md` (Power Scrubber)
+  - `xall-airpure-response-library.md` / `xall-airpure-active-responses.md` (Air Pure Purifier)
+  - `xall-subscription-response-library.md` / `xall-subscription-active-responses.md` (Subscription)
+- Updated `refund-pushback/README.md`: added all 14 files to file table, documented 7 synced pairs with macro content rules
+- Updated `README.md`: repo structure table now includes all response library and active responses files
+
+### Why
+Each product track and the subscription track needs its own response library (full options with ACTIVE/RESERVE markers) and active responses file (deployed macros only), mirroring the Pdf.net_Docs dual-file pattern. Files are scaffolds — macro content will be populated as each track is built out.
+
+### Review flags
+[None]
+
+---
+
 ## 2026-03-30 — [MULTI] Add refund pushback, operations, and skills folders
 
 **File(s) changed:** `README.md`, `GLOSSARY.md`, `CHANGELOG.md`, and all new files below

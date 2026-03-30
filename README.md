@@ -20,7 +20,21 @@ Operational documentation for X-All customer service systems. Maintained collabo
 ├── refund-pushback/
 │   ├── README.md                                      ← Pushback-specific rules, locked values, synced pairs
 │   ├── xall-architecture.md                           ← System design — layer flow, routing, per-product tracks
-│   └── xall-classification-prompt.md                  ← Intake classifier — Product Refund / Subscription / Fallback
+│   ├── xall-classification-prompt.md                  ← Intake classifier — Product Refund / Subscription / Fallback
+│   ├── xall-toilet-response-library.md                ← All options — Foaming Toilet Cleaner track
+│   ├── xall-toilet-active-responses.md                ← Deployed macros — Foaming Toilet Cleaner track
+│   ├── xall-spray-response-library.md                 ← All options — Multi-Purpose Spray track
+│   ├── xall-spray-active-responses.md                 ← Deployed macros — Multi-Purpose Spray track
+│   ├── xall-washer-response-library.md                ← All options — Washing Machine Cleaner track
+│   ├── xall-washer-active-responses.md                ← Deployed macros — Washing Machine Cleaner track
+│   ├── xall-dishwasher-response-library.md            ← All options — Dishwasher Cleaner track
+│   ├── xall-dishwasher-active-responses.md            ← Deployed macros — Dishwasher Cleaner track
+│   ├── xall-scrubber-response-library.md              ← All options — Power Scrubber track
+│   ├── xall-scrubber-active-responses.md              ← Deployed macros — Power Scrubber track
+│   ├── xall-airpure-response-library.md               ← All options — Air Pure Purifier track
+│   ├── xall-airpure-active-responses.md               ← Deployed macros — Air Pure Purifier track
+│   ├── xall-subscription-response-library.md          ← All options — Subscription track
+│   └── xall-subscription-active-responses.md          ← Deployed macros — Subscription track
 │
 ├── operations/
 │   ├── README.md                                      ← Operations-specific rules and scope
