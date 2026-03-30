@@ -6,6 +6,30 @@ Format: `## YYYY-MM-DD — [SCOPE] Summary`
 
 ---
 
+## 2026-03-30 — [PUSHBACK] Populate Foaming Toilet Cleaner track with full macro content
+
+**File(s) changed:** `refund-pushback/xall-toilet-active-responses.md`, `refund-pushback/xall-toilet-response-library.md`, `refund-pushback/xall-architecture.md`, `CHANGELOG.md`
+**Changed by:** AI Agent (Claude, acting as proxy for Brendan)
+
+### What changed
+- Populated `xall-toilet-active-responses.md` with full deployment-ready macro content: L1 (1 macro), L2 (8 buckets: Default Pushback, No Foaming Action, Residue Left Behind, Stains Not Removed, Toilet Clogged, Skin Irritation, Scent Concern, Powder Clumping), L3 (3 bundle offers: Fresh Start Bundle, Whole-Home Rescue Kit, Mega-Sparkle Offer), Terminal (human-handled note)
+- Populated `xall-toilet-response-library.md` with matching content, all macros marked `ACTIVE`
+- Both files include: System Overview, Locked Values table, Approved Dynamic Placeholders
+- Updated `xall-architecture.md`: Foaming Toilet Cleaner track status changed from "Pending" to "Live"
+
+### Fixes applied (from source review)
+- L2 Default Pushback: removed dependent statement ("I'm sorry to hear you're considering a return.")
+- L3 Whole-Home Rescue Kit and Mega-Sparkle Offer: fixed math claim from "over $130" to "nearly $130" ($39.95 × 3 + $9.99 = $129.84)
+- Active responses header: fixed cross-reference from `xall-response-library.md` to `xall-toilet-response-library.md`
+
+### Why
+First product track fully built out. Macros sourced from user-provided active responses file, reviewed against cs-macro-standards skill, and corrected where needed.
+
+### Review flags
+[None]
+
+---
+
 ## 2026-03-30 — [PUSHBACK] Add per-product response library and active responses scaffolds
 
 **File(s) changed:** `refund-pushback/README.md`, `README.md`, `CHANGELOG.md`, and 14 new files
