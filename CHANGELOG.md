@@ -6,6 +6,38 @@ Format: `## YYYY-MM-DD — [SCOPE] Summary`
 
 ---
 
+## 2026-03-30 — [MULTI] Add refund pushback, operations, and skills folders
+
+**File(s) changed:** `README.md`, `GLOSSARY.md`, `CHANGELOG.md`, and all new files below
+**Changed by:** AI Agent (Claude, acting as proxy for Brendan)
+
+### What changed
+- Created `refund-pushback/` folder:
+  - `README.md` — folder guide with locked values, macro rules summary, system overview
+  - `xall-architecture.md` — system design: sequential per-product tracks, 3-way intake classification (Product Refund / Subscription / Fallback), layer behavior (L1–Terminal), per-product track status table
+  - `xall-classification-prompt.md` — intake classifier prompt for routing customer intent
+- Created `operations/` folder:
+  - `README.md` — folder guide with scope definition
+  - `xall-nova-sop.md` — human team SOPs for Nova AI agent coordination (10-min wait, ESCALATED priority, no interference with active Nova tickets)
+- Created `skills/` folder:
+  - `README.md` — skill index and usage guide
+  - `cs-macro-standards/SKILL.md` — macro writing framework (ported from Pdf.net_Docs, brand-agnostic)
+  - `cs-macro-standards/references/dependent-statements.md` — dependency types, independence test, red-flag words
+  - `cs-macro-standards/references/writing-best-practices.md` — structural rules, endpoint principle, naming conventions
+  - `cs-macro-standards/references/qa-checklist.md` — systematic audit process and reporting format
+  - `cs-macro-standards/references/iteration-sop.md` — user collaboration workflow for macro development
+  - `cs-macro-standards/references/examples-pdfnet.md` — worked examples (teaching reference)
+- Updated `README.md` — repo structure table now includes all new folders and files; navigation instructions updated
+- Updated `GLOSSARY.md` — added 18 new terms: Active status, Bucket, Classification echo, Cohort, Dependent statement, Endpoint response, ESCALATED, Fallback, Formatting agent, L1, L2, Macro, NOVA, Product Refund, Product track, Pushback, Reserve status, Subscription
+
+### Why
+Scaffolding the refund pushback system, operations, and macro governance for X-All. Architecture and classification prompt are structural; macro content for individual product tracks will be added as tracks are built out.
+
+### Review flags
+[None]
+
+---
+
 ## 2026-03-25 — [STRUCT] Initial repository creation with knowledge base
 
 **File(s) changed:** All files (new repo)
