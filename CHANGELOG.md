@@ -6,6 +6,30 @@ Format: `## YYYY-MM-DD — [SCOPE] Summary`
 
 ---
 
+## 2026-03-30 — [MULTI] Add L4 Partial Resolution and L5 Terminal Resolution; update architecture from 4-layer to 5-layer
+
+**File(s) changed:** `refund-pushback/xall-architecture.md`, `refund-pushback/foaming-toilet-cleaner/xall-toilet-active-responses.md`, `refund-pushback/foaming-toilet-cleaner/xall-toilet-response-library.md`, `CHANGELOG.md`
+**Changed by:** AI Agent (Claude, acting as proxy for Brendan)
+
+### What changed
+- Updated architecture from 4-layer (L1 → L2 → L3 → Terminal) to 5-layer (L1 → L2 → L3 → L4 → L5)
+- Split "L3+ — Retention Offers / Partial Resolution" into separate L3 (Save Sale) and L4 (Partial Resolution) sections in `xall-architecture.md`
+- Renamed "Terminal Layer — Resolution" to "L5 — Terminal Resolution" across all files
+- Added L4 Partial Resolution macro to toilet cleaner active responses: presents return policy friction (fees, shipping, postage) then offers 50% refund + keep product as alternative
+- Added L4 to response library with 4 options: Warm & Direct (ACTIVE), Concise & Confident (RESERVE), International-Specific (RESERVE), Reformatted Original (RESERVE)
+- L4 is universal across all product tracks — same macro regardless of product
+- L5 placeholder added to both files (pending — human-operated)
+- Updated customer path tables in architecture doc to reflect 5-layer flow
+- Updated system overview tables in both toilet cleaner files
+
+### Why
+L4 (50% partial refund offer) is the final automated retention attempt before human-operated terminal resolution. Applies universally across all product tracks. Will be duplicated into each product track as they are built out.
+
+### Review flags
+[None]
+
+---
+
 ## 2026-03-30 — [SKILLS] Add Scannability & Emphasis Formatting section to cs-macro-standards
 
 **File(s) changed:** `skills/cs-macro-standards/references/writing-best-practices.md`

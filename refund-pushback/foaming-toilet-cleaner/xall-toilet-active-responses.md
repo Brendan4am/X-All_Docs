@@ -10,14 +10,15 @@ Last updated: March 2026
 
 ## System Overview
 
-Sequential 4-layer refund pushback flow for X-All Foaming Toilet Cleaner. No cohort split — all customers are refund requestors. Shipping-related issues bypass this flow entirely. Nova automates L1, L2, and L3. Terminal resolution (full refund processing) is handled by a human agent.
+Sequential 5-layer refund pushback flow for X-All Foaming Toilet Cleaner. No cohort split — all customers are refund requestors. Shipping-related issues bypass this flow entirely. Nova automates L1, L2, L3, and L4. Terminal resolution (L5) is handled by a human agent.
 
 | Layer | Name | Automated |
 |---|---|---|
 | L1 | Ask Why | Yes (Nova) |
 | L2 | Troubleshoot | Yes (Nova) |
 | L3 | Save Sale — Bundle Offer | Yes (Nova) |
-| Terminal | Process Refund | No (Human) |
+| L4 | Partial Resolution | Yes (Nova) |
+| L5 | Terminal Resolution | No (Human) |
 
 Entry: No reason provided → L1 → L2. Reason provided at intake → L2 directly.
 
@@ -192,9 +193,35 @@ If this sounds good, just reply **YES** and I'll get everything processed right 
 
 ---
 
-# Terminal — Process Refund
+# Layer 4 — Partial Resolution
 
-> **Note:** Terminal resolution is handled by a human agent, not Nova. The human agent processes the refund and sends follow-up communications including discount codes. Terminal macros are outside the scope of this document.
+L4 fires when L3 has been served and declined. The goal is to offer a partial refund as the final retention attempt before full refund. This layer is universal across all product tracks.
+
+## 50% Partial Refund (Keep Product)
+
+One last thing before I process the return. I want to make sure you're aware of what's involved so there are no surprises:
+
+• **30-day return window** from date of delivery
+• **$4.95 reprocessing fee** deducted from refund
+• **Original shipping costs** deducted from refund
+• **Return postage** is the customer's responsibility
+• Full policy details: [X-All Return Policy](https://x-all.com/pages/return-policy)
+
+That said, I'd like to offer you an alternative that skips all of that:
+
+• **50% refund** processed back to your original payment method
+• **No $4.95 reprocessing fee**
+• **No return shipping costs**
+• **Keep the product** — no need to send anything back
+• **Refund typically appears within 1–10 business days** depending on your bank or card provider
+
+You save time, avoid the extra costs, and still get money back — without the hassle of returning the order. If this works for you, just reply **YES** and I'll process the refund right away.
+
+---
+
+# Layer 5 — Terminal Resolution
+
+> **Note:** Terminal resolution is handled by a human agent, not Nova. The human agent processes the refund and sends follow-up communications including discount codes. L5 macros are pending.
 
 ---
 

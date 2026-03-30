@@ -53,15 +53,15 @@ Each core product has its own pushback track. Within a track, customers progress
 
 | Entry Condition | Path |
 |---|---|
-| No reason provided | Initial Node → Product Track L1 → L2 → L3 → ... → Terminal |
-| Reason provided at intake | Initial Node → Product Track L2 → L3 → ... → Terminal |
+| No reason provided | Initial Node → Product Track L1 → L2 → L3 → L4 → L5 |
+| Reason provided at intake | Initial Node → Product Track L2 → L3 → L4 → L5 |
 
 ### Subscription Paths
 
 | Entry Condition | Path |
 |---|---|
-| No reason provided | Initial Node → Subscription L1 → L2 → L3 → ... → Terminal |
-| Reason provided at intake | Initial Node → Subscription L2 → L3 → ... → Terminal |
+| No reason provided | Initial Node → Subscription L1 → L2 → L3 → L4 → L5 |
+| Reason provided at intake | Initial Node → Subscription L2 → L3 → L4 → L5 |
 
 ---
 
@@ -92,16 +92,28 @@ Each layer is described by its behavior — what it does, when it fires, and how
 | **Constraints** | No offers. No forward references to other layers. |
 | **Buckets** | Product-specific. Defined per product track as tracks are built out. |
 
-### L3+ — Retention Offers / Partial Resolution
+### L3 — Save Sale (Retention Offers)
 
 | Property | Detail |
 |---|---|
 | **Fires when** | L2 has been served and declined. |
-| **Goal** | Offer alternatives to the requested return/refund/cancellation. |
-| **Track variance** | Yes — offers differ by product and by cohort (Product Refund vs. Subscription). |
-| **Details** | Pending — retention offers and layer structure beyond L2 will be defined as product tracks are built out. |
+| **Goal** | Offer alternatives to the requested return/refund. Retain the sale by adding value with complementary products or incentives. |
+| **Track variance** | Yes — offers differ by product. Each product track defines its own bundle offers. |
+| **Macro structure** | Multiple offer options per track. Routing software selects one. Each offer is self-contained — no cross-referencing between offers. |
+| **Constraints** | No cross-referencing between offers. No forward references to L4 or L5. |
 
-### Terminal Layer — Resolution
+### L4 — Partial Resolution
+
+| Property | Detail |
+|---|---|
+| **Fires when** | L3 has been served and declined. |
+| **Goal** | Offer a partial refund as the final retention attempt before full refund. Present the return policy friction first, then offer partial refund + keep the product as the easier path. |
+| **Track variance** | No — L4 is universal across all product tracks. Same macro content regardless of which product the customer purchased. |
+| **Macro structure** | Single macro with tonal options. |
+| **Strategy** | Present return policy details (fees, shipping costs, customer-paid return postage) to establish the friction of a full return, then offer 50% refund with no return required as the simpler alternative. |
+| **Constraints** | No forward references. No hint of additional options beyond this offer. |
+
+### L5 — Terminal Resolution
 
 | Property | Detail |
 |---|---|
