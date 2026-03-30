@@ -6,6 +6,24 @@ Format: `## YYYY-MM-DD — [SCOPE] Summary`
 
 ---
 
+## 2026-03-30 — [OPS] Add sign-off details to brand config
+
+**File(s) changed:** `operations/xall-brand-config.md`, `operations/x-all-setup-status/xall-brand-setup-status.md`, `CHANGELOG.md`
+**Changed by:** AI Agent (Claude, acting as proxy for Brendan)
+
+### What changed
+- Populated sign-off details: Name = Elizabeth Freeman, Role = Customer Service Representative
+- Removed review flag (sign-off TBD resolved)
+- Added "Brand config — sign-off details" checkbox to brand setup status (checked)
+
+### Why
+Sign-off name and role confirmed by stakeholder.
+
+### Review flags
+- [Flag removed] `operations/xall-brand-config.md` — sign-off name and role no longer TBD
+
+---
+
 ## 2026-03-30 — [OPS] Add setup status tracking for X-All brand and products
 
 **File(s) changed:** 7 new files in `operations/x-all-setup-status/`, `operations/README.md`, `README.md`, `CHANGELOG.md`

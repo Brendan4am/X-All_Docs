@@ -8,6 +8,7 @@ Tracks brand-level onboarding progress per Phase 1 of `nova-new-product-sop.md`.
 
 - [x] Knowledge base created
 - [x] Brand config created
+- [x] Brand config — sign-off details
 - [x] Classification prompt created
 - [x] Architecture doc created
 

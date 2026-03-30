@@ -10,11 +10,9 @@ Used by the formatting agent for all outbound customer communications.
 
 | Field | Value |
 |---|---|
-| **Name** | ⚠️ TBD — awaiting confirmation |
-| **Role** | ⚠️ TBD — awaiting confirmation |
+| **Name** | Elizabeth Freeman |
+| **Role** | Customer Service Representative |
 | **Company** | X-All |
-
-> ⚠️ **Review flag:** Sign-off name and role require stakeholder confirmation before go-live.
 
 ---
 
