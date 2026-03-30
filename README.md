@@ -61,7 +61,16 @@ Operational documentation for X-All customer service systems. Maintained collabo
 │   ├── README.md                                      ← Operations-specific rules and scope
 │   ├── nova-new-product-sop.md                        ← Brand-agnostic SOP for onboarding new products into Nova
 │   ├── xall-nova-sop.md                               ← Human team SOPs for Nova AI agent coordination
-│   └── xall-brand-config.md                           ← Sign-off details, formatting agent behavior, brand defaults
+│   ├── xall-brand-config.md                           ← Sign-off details, formatting agent behavior, brand defaults
+│   │
+│   └── x-all-setup-status/                            ← X-All onboarding progress tracking
+│       ├── xall-brand-setup-status.md                 ← Brand-level setup checklist
+│       ├── foaming-toilet-cleaner-setup-status.md     ← Product setup checklist (done)
+│       ├── multi-purpose-spray-setup-status.md        ← Product setup checklist
+│       ├── washing-machine-cleaner-setup-status.md    ← Product setup checklist
+│       ├── dishwasher-cleaner-setup-status.md         ← Product setup checklist
+│       ├── power-scrubber-setup-status.md             ← Product setup checklist
+│       └── air-pure-purifier-setup-status.md          ← Product setup checklist
 │
 └── skills/
     ├── README.md                                      ← Skill index and usage guide
@@ -104,6 +113,7 @@ Files with an `xall-` prefix are specific to X-All. Files without a prefix are a
 | `operations/nova-new-product-sop.md` | Brand-agnostic SOP for onboarding new brands/products into Nova | All agents, onboarding |
 | `operations/xall-nova-sop.md` | Human team SOPs for Nova AI agent coordination | Human CS team |
 | `operations/xall-brand-config.md` | Sign-off details, formatting agent config, brand-level defaults | Formatting agent, human team |
+| `operations/x-all-setup-status/` | Onboarding progress tracking — brand-level and per-product checklists | All agents, onboarding |
 | `skills/cs-macro-standards/SKILL.md` | Macro writing framework — mandatory for all macro work | All macro authors |
 
 ---

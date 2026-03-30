@@ -6,6 +6,33 @@ Format: `## YYYY-MM-DD — [SCOPE] Summary`
 
 ---
 
+## 2026-03-30 — [OPS] Add setup status tracking for X-All brand and products
+
+**File(s) changed:** 7 new files in `operations/x-all-setup-status/`, `operations/README.md`, `README.md`, `CHANGELOG.md`
+**Changed by:** AI Agent (Claude, acting as proxy for Brendan)
+
+### What changed
+- Created `operations/x-all-setup-status/` folder for onboarding progress tracking
+- Created `xall-brand-setup-status.md` — brand-level checklist (KB, brand config, classification prompt, architecture — all checked)
+- Created 6 product setup status files with per-layer checkboxes:
+  - `foaming-toilet-cleaner-setup-status.md` — all checked (fully built out)
+  - `multi-purpose-spray-setup-status.md` — subfolder, L1, L4 checked; L2, L3, L5, active responses, issue triggers unchecked
+  - `washing-machine-cleaner-setup-status.md` — same as spray
+  - `dishwasher-cleaner-setup-status.md` — same as spray
+  - `power-scrubber-setup-status.md` — same as spray
+  - `air-pure-purifier-setup-status.md` — same as spray
+- Brand-level file links to each product status file with Done/Not done roll-up
+- Updated `operations/README.md`: added folder to file table and scope
+- Updated `README.md`: added folder to repo structure tree and documents-at-a-glance table
+
+### Why
+The onboarding SOP defines what needs to happen but had no mechanism for tracking whether it happened. Status files give the agent a place to check boxes as deliverables are completed, and give humans a single view of onboarding progress per brand and product.
+
+### Review flags
+[None]
+
+---
+
 ## 2026-03-30 — [MULTI] Add onboarding SOP, brand config, and issue triggers scaffolds
 
 **File(s) changed:** `operations/nova-new-product-sop.md`, `operations/xall-brand-config.md`, 7 issue-trigger files, `refund-pushback/README.md`, `operations/README.md`, `README.md`, `CHANGELOG.md`
