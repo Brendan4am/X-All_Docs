@@ -6,26 +6,44 @@ This folder contains all documentation for the X-All refund pushback system. Fil
 
 ---
 
-## Files in This Folder
+## Folder Structure
 
-| File | Description |
-|---|---|
-| `xall-architecture.md` | System design reference — layer flow, routing logic, customer paths, macro rules |
-| `xall-classification-prompt.md` | Top-level classifier prompt — routes customer intent to Product Refund, Subscription, or Fallback |
-| `xall-toilet-response-library.md` | Full option library — Foaming Toilet Cleaner track |
-| `xall-toilet-active-responses.md` | Deployed macros — Foaming Toilet Cleaner track |
-| `xall-spray-response-library.md` | Full option library — Multi-Purpose Spray track |
-| `xall-spray-active-responses.md` | Deployed macros — Multi-Purpose Spray track |
-| `xall-washer-response-library.md` | Full option library — Washing Machine Cleaner track |
-| `xall-washer-active-responses.md` | Deployed macros — Washing Machine Cleaner track |
-| `xall-dishwasher-response-library.md` | Full option library — Dishwasher Cleaner track |
-| `xall-dishwasher-active-responses.md` | Deployed macros — Dishwasher Cleaner track |
-| `xall-scrubber-response-library.md` | Full option library — Power Scrubber track |
-| `xall-scrubber-active-responses.md` | Deployed macros — Power Scrubber track |
-| `xall-airpure-response-library.md` | Full option library — Air Pure Purifier track |
-| `xall-airpure-active-responses.md` | Deployed macros — Air Pure Purifier track |
-| `xall-subscription-response-library.md` | Full option library — Subscription track |
-| `xall-subscription-active-responses.md` | Deployed macros — Subscription track |
+```
+refund-pushback/
+├── README.md                                                  ← Folder guide (you are here)
+├── xall-architecture.md                                       ← System design — layer flow, routing logic, per-product tracks
+├── xall-classification-prompt.md                              ← Intake classifier prompt — Product Refund / Subscription / Fallback
+│
+├── foaming-toilet-cleaner/                                    ← Foaming Toilet Cleaner ($39.95) pushback track
+│   ├── xall-toilet-response-library.md                        ← Full option library — all macros with ACTIVE/RESERVE markers
+│   └── xall-toilet-active-responses.md                        ← Deployed macros only — what Nova serves to customers
+│
+├── multi-purpose-spray/                                       ← Multi-Purpose Spray ($39.95) pushback track
+│   ├── xall-spray-response-library.md                         ← Full option library — all macros with ACTIVE/RESERVE markers
+│   └── xall-spray-active-responses.md                         ← Deployed macros only — what Nova serves to customers
+│
+├── washing-machine-cleaner/                                   ← Washing Machine Cleaner ($39.95) pushback track
+│   ├── xall-washer-response-library.md                        ← Full option library — all macros with ACTIVE/RESERVE markers
+│   └── xall-washer-active-responses.md                        ← Deployed macros only — what Nova serves to customers
+│
+├── dishwasher-cleaner/                                        ← Dishwasher Cleaner ($39.95) pushback track
+│   ├── xall-dishwasher-response-library.md                    ← Full option library — all macros with ACTIVE/RESERVE markers
+│   └── xall-dishwasher-active-responses.md                    ← Deployed macros only — what Nova serves to customers
+│
+├── power-scrubber/                                            ← Power Scrubber ($79.95) pushback track
+│   ├── xall-scrubber-response-library.md                      ← Full option library — all macros with ACTIVE/RESERVE markers
+│   └── xall-scrubber-active-responses.md                      ← Deployed macros only — what Nova serves to customers
+│
+├── air-pure-purifier/                                         ← Air Pure Purifier ($79.95) pushback track
+│   ├── xall-airpure-response-library.md                       ← Full option library — all macros with ACTIVE/RESERVE markers
+│   └── xall-airpure-active-responses.md                       ← Deployed macros only — what Nova serves to customers
+│
+└── subscription/                                              ← Subscription (unified across all products) pushback track
+    ├── xall-subscription-response-library.md                  ← Full option library — all macros with ACTIVE/RESERVE markers
+    └── xall-subscription-active-responses.md                  ← Deployed macros only — what Nova serves to customers
+```
+
+Each product subfolder contains a **synced pair**: the response library (all options with ACTIVE/RESERVE markers) and the active responses file (deployed macros only — the subset Nova actually serves to customers).
 
 ---
 
@@ -35,24 +53,24 @@ X-All uses a sequential pushback flow. Customer intent is classified at intake i
 
 Within the Product Refund cohort, each core product has its own pushback track with product-specific macros:
 
-- Foaming Toilet Cleaner
-- Multi-Purpose Spray
-- Washing Machine Cleaner
-- Dishwasher Cleaner
-- Power Scrubber
-- Air Pure Purifier
+- Foaming Toilet Cleaner ($39.95)
+- Multi-Purpose Spray ($39.95)
+- Washing Machine Cleaner ($39.95)
+- Dishwasher Cleaner ($39.95)
+- Power Scrubber ($79.95)
+- Air Pure Purifier ($79.95)
 
 ```
 Customer enters:
 ├── Fallback → Exits flow (safety/dispute)
-├── Subscription → Subscription pushback track (L1 → L2 → ... → Terminal)
+├── Subscription → subscription/ track (L1 → L2 → ... → Terminal)
 └── Product Refund → Product-specific pushback track
-                        ├── Foaming Toilet Cleaner track
-                        ├── Multi-Purpose Spray track
-                        ├── Washing Machine Cleaner track
-                        ├── Dishwasher Cleaner track
-                        ├── Power Scrubber track
-                        └── Air Pure Purifier track
+                        ├── foaming-toilet-cleaner/     (Foaming Toilet Cleaner — $39.95)
+                        ├── multi-purpose-spray/        (Multi-Purpose Spray — $39.95)
+                        ├── washing-machine-cleaner/    (Washing Machine Cleaner — $39.95)
+                        ├── dishwasher-cleaner/         (Dishwasher Cleaner — $39.95)
+                        ├── power-scrubber/             (Power Scrubber — $79.95)
+                        └── air-pure-purifier/          (Air Pure Purifier — $79.95)
 ```
 
 ---
@@ -94,17 +112,17 @@ The following values require **explicit human confirmation** before any change. 
 
 ## Synced File Pairs
 
-Each product track and the subscription track has a synced pair. Always edit the **response library first**, then propagate to the active responses file in the same commit.
+Each product track and the subscription track has a synced pair inside its subfolder. Always edit the **response library first**, then propagate to the active responses file in the same commit.
 
-| Source File (Library) | Synced Copy (Active) | Sync Rule |
-|---|---|---|
-| `xall-toilet-response-library.md` | `xall-toilet-active-responses.md` | Active responses are a subset of the library. When macros change in the library, update the active file to match. |
-| `xall-spray-response-library.md` | `xall-spray-active-responses.md` | Same as above. |
-| `xall-washer-response-library.md` | `xall-washer-active-responses.md` | Same as above. |
-| `xall-dishwasher-response-library.md` | `xall-dishwasher-active-responses.md` | Same as above. |
-| `xall-scrubber-response-library.md` | `xall-scrubber-active-responses.md` | Same as above. |
-| `xall-airpure-response-library.md` | `xall-airpure-active-responses.md` | Same as above. |
-| `xall-subscription-response-library.md` | `xall-subscription-active-responses.md` | Same as above. |
+| Track Folder | Source File (Library) | Synced Copy (Active) | Sync Rule |
+|---|---|---|---|
+| `foaming-toilet-cleaner/` | `xall-toilet-response-library.md` | `xall-toilet-active-responses.md` | Active responses are a subset of the library. When macros change in the library, update the active file to match. |
+| `multi-purpose-spray/` | `xall-spray-response-library.md` | `xall-spray-active-responses.md` | Same as above. |
+| `washing-machine-cleaner/` | `xall-washer-response-library.md` | `xall-washer-active-responses.md` | Same as above. |
+| `dishwasher-cleaner/` | `xall-dishwasher-response-library.md` | `xall-dishwasher-active-responses.md` | Same as above. |
+| `power-scrubber/` | `xall-scrubber-response-library.md` | `xall-scrubber-active-responses.md` | Same as above. |
+| `air-pure-purifier/` | `xall-airpure-response-library.md` | `xall-airpure-active-responses.md` | Same as above. |
+| `subscription/` | `xall-subscription-response-library.md` | `xall-subscription-active-responses.md` | Same as above. |
 
 ### Macro content rules
 
@@ -120,7 +138,7 @@ Each product track and the subscription track has a synced pair. Always edit the
 
 1. Read `AGENT_SOP.md` first
 2. Read this README
-3. Apply the file naming convention: `xall-{description}.md` for X-All-specific files
-4. Add the new file to the table above in this README
+3. Apply the file naming convention: `xall-{description}.md` for shared files; product-specific content goes in the product subfolder
+4. Add the new file to the folder structure diagram above
 5. Add the new file to the repo structure table in the root `README.md`
 6. Log the addition in `CHANGELOG.md`

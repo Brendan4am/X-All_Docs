@@ -6,6 +6,34 @@ Format: `## YYYY-MM-DD — [SCOPE] Summary`
 
 ---
 
+## 2026-03-30 — [STRUCT] Reorganize refund-pushback into per-product subfolders
+
+**File(s) changed:** `README.md`, `refund-pushback/README.md`, `refund-pushback/xall-architecture.md`, `CHANGELOG.md`, and all 14 product track files (moved)
+**Changed by:** AI Agent (Claude, acting as proxy for Brendan)
+
+### What changed
+- Created per-product subfolders with full product names inside `refund-pushback/`:
+  - `foaming-toilet-cleaner/` — Foaming Toilet Cleaner ($39.95) pushback track
+  - `multi-purpose-spray/` — Multi-Purpose Spray ($39.95) pushback track
+  - `washing-machine-cleaner/` — Washing Machine Cleaner ($39.95) pushback track
+  - `dishwasher-cleaner/` — Dishwasher Cleaner ($39.95) pushback track
+  - `power-scrubber/` — Power Scrubber ($79.95) pushback track
+  - `air-pure-purifier/` — Air Pure Purifier ($79.95) pushback track
+  - `subscription/` — Subscription (unified) pushback track
+- Moved each product's response library and active responses files into their respective subfolders (filenames preserved)
+- Updated `refund-pushback/README.md`: replaced flat file table with folder structure diagram, updated synced pairs table with folder paths, updated routing diagram with folder names
+- Updated `README.md`: repo structure tree now reflects per-product subfolder layout
+- Updated `refund-pushback/xall-architecture.md`: track status table file references now include folder paths
+- Updated cross-references in toilet track files to point to co-located files
+
+### Why
+14 flat files in one directory was unmanageable and would only get worse as tracks are built out. Per-product subfolders with full product names make navigation intuitive and keep each track's files co-located.
+
+### Review flags
+[None]
+
+---
+
 ## 2026-03-30 — [PUSHBACK] Populate Foaming Toilet Cleaner track with full macro content
 
 **File(s) changed:** `refund-pushback/xall-toilet-active-responses.md`, `refund-pushback/xall-toilet-response-library.md`, `refund-pushback/xall-architecture.md`, `CHANGELOG.md`

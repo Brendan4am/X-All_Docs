@@ -21,20 +21,34 @@ Operational documentation for X-All customer service systems. Maintained collabo
 │   ├── README.md                                      ← Pushback-specific rules, locked values, synced pairs
 │   ├── xall-architecture.md                           ← System design — layer flow, routing, per-product tracks
 │   ├── xall-classification-prompt.md                  ← Intake classifier — Product Refund / Subscription / Fallback
-│   ├── xall-toilet-response-library.md                ← All options — Foaming Toilet Cleaner track
-│   ├── xall-toilet-active-responses.md                ← Deployed macros — Foaming Toilet Cleaner track
-│   ├── xall-spray-response-library.md                 ← All options — Multi-Purpose Spray track
-│   ├── xall-spray-active-responses.md                 ← Deployed macros — Multi-Purpose Spray track
-│   ├── xall-washer-response-library.md                ← All options — Washing Machine Cleaner track
-│   ├── xall-washer-active-responses.md                ← Deployed macros — Washing Machine Cleaner track
-│   ├── xall-dishwasher-response-library.md            ← All options — Dishwasher Cleaner track
-│   ├── xall-dishwasher-active-responses.md            ← Deployed macros — Dishwasher Cleaner track
-│   ├── xall-scrubber-response-library.md              ← All options — Power Scrubber track
-│   ├── xall-scrubber-active-responses.md              ← Deployed macros — Power Scrubber track
-│   ├── xall-airpure-response-library.md               ← All options — Air Pure Purifier track
-│   ├── xall-airpure-active-responses.md               ← Deployed macros — Air Pure Purifier track
-│   ├── xall-subscription-response-library.md          ← All options — Subscription track
-│   └── xall-subscription-active-responses.md          ← Deployed macros — Subscription track
+│   │
+│   ├── foaming-toilet-cleaner/                        ← Foaming Toilet Cleaner ($39.95) pushback track
+│   │   ├── xall-toilet-response-library.md            ← Full option library — all macros with ACTIVE/RESERVE markers
+│   │   └── xall-toilet-active-responses.md            ← Deployed macros — what Nova serves to customers
+│   │
+│   ├── multi-purpose-spray/                           ← Multi-Purpose Spray ($39.95) pushback track
+│   │   ├── xall-spray-response-library.md             ← Full option library — all macros with ACTIVE/RESERVE markers
+│   │   └── xall-spray-active-responses.md             ← Deployed macros — what Nova serves to customers
+│   │
+│   ├── washing-machine-cleaner/                       ← Washing Machine Cleaner ($39.95) pushback track
+│   │   ├── xall-washer-response-library.md            ← Full option library — all macros with ACTIVE/RESERVE markers
+│   │   └── xall-washer-active-responses.md            ← Deployed macros — what Nova serves to customers
+│   │
+│   ├── dishwasher-cleaner/                            ← Dishwasher Cleaner ($39.95) pushback track
+│   │   ├── xall-dishwasher-response-library.md        ← Full option library — all macros with ACTIVE/RESERVE markers
+│   │   └── xall-dishwasher-active-responses.md        ← Deployed macros — what Nova serves to customers
+│   │
+│   ├── power-scrubber/                                ← Power Scrubber ($79.95) pushback track
+│   │   ├── xall-scrubber-response-library.md          ← Full option library — all macros with ACTIVE/RESERVE markers
+│   │   └── xall-scrubber-active-responses.md          ← Deployed macros — what Nova serves to customers
+│   │
+│   ├── air-pure-purifier/                             ← Air Pure Purifier ($79.95) pushback track
+│   │   ├── xall-airpure-response-library.md           ← Full option library — all macros with ACTIVE/RESERVE markers
+│   │   └── xall-airpure-active-responses.md           ← Deployed macros — what Nova serves to customers
+│   │
+│   └── subscription/                                  ← Subscription (unified across all products) pushback track
+│       ├── xall-subscription-response-library.md      ← Full option library — all macros with ACTIVE/RESERVE markers
+│       └── xall-subscription-active-responses.md      ← Deployed macros — what Nova serves to customers
 │
 ├── operations/
 │   ├── README.md                                      ← Operations-specific rules and scope

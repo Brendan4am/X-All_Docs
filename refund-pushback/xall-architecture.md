@@ -115,7 +115,7 @@ Each layer is described by its behavior — what it does, when it fires, and how
 
 | Product | Track Status | L2 Buckets | L3+ Offers | Active Responses | Response Library |
 |---|---|---|---|---|---|
-| Foaming Toilet Cleaner | **Live** | 8 (7 specific + 1 default) | 3 bundle offers | `xall-toilet-active-responses.md` | `xall-toilet-response-library.md` |
+| Foaming Toilet Cleaner | **Live** | 8 (7 specific + 1 default) | 3 bundle offers | `foaming-toilet-cleaner/xall-toilet-active-responses.md` | `foaming-toilet-cleaner/xall-toilet-response-library.md` |
 | Multi-Purpose Spray | Pending | Pending | Pending | — | — |
 | Washing Machine Cleaner | Pending | Pending | Pending | — | — |
 | Dishwasher Cleaner | Pending | Pending | Pending | — | — |

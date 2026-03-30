@@ -1,10 +1,10 @@
-# X-All Foaming Toilet Cleaner — Active Responses (Deployment Reference)
+# X-All — Foaming Toilet Cleaner ($39.95) Response Library (All Options)
 
-One macro per slot. This is what the system serves to customers. No alternatives, no option labels.
-
-> All macros are intro-stripped. The formatting agent handles greetings, sign-offs, and personalization. Macros contain substance only. For the full option library, see `xall-toilet-response-library.md`.
+Complete option library for Foaming Toilet Cleaner ($39.95) pushback track. Each option is marked `ACTIVE` (currently deployed) or `RESERVE` (available for future use). For the deployment reference showing only active macros, see `xall-toilet-active-responses.md` in this folder.
 
 Last updated: March 2026
+
+> All macros are intro-stripped. The formatting agent handles greetings, sign-offs, and personalization. Macros contain substance only. Governed by `/skills/cs-macro-standards/SKILL.md`.
 
 ---
 
@@ -51,7 +51,7 @@ None. All macros in the Nova-automated flow (L1, L2, L3) are fully static string
 
 # Layer 1 — Ask Why
 
-### Reason Collection
+### Reason Collection `ACTIVE`
 
 Before I take any action on your order, could you let me know a bit more about what's prompting your refund request? That way I can make sure we address the right thing and find the best path forward for you.
 
@@ -61,7 +61,7 @@ Before I take any action on your order, could you let me know a bit more about w
 
 L2 addresses the customer's stated product concern with targeted troubleshooting. The goal is to resolve the issue in one shot and retain the sale. No offers. 7 specific quality-issue buckets plus a default catch-all (8 total).
 
-### Default Pushback
+### Default Pushback `ACTIVE`
 
 Before we move forward with a refund, here are a few core benefits many customers discover after spending more time with X-All Foaming Toilet Cleaner:
 
@@ -73,7 +73,7 @@ Before we move forward with a refund, here are a few core benefits many customer
 
 I'd love for you to give the product a fair shot before any changes are made to your order. If you need any guidance on getting the best results, I'm here.
 
-### No Foaming Action
+### No Foaming Action `ACTIVE`
 
 Before we move forward with a refund, I'd like to share a few steps that usually help get the full foaming action from X-All Foaming Toilet Cleaner:
 
@@ -84,7 +84,7 @@ Before we move forward with a refund, I'd like to share a few steps that usually
 
 These steps should help unlock the full cleaning power of X-All Foaming Toilet Cleaner. If results are still falling short after trying them, let me know and I'll make sure we find the right solution.
 
-### Residue Left Behind
+### Residue Left Behind `ACTIVE`
 
 Before we move forward with a refund, here are a few steps that help ensure a clean finish with X-All Foaming Toilet Cleaner:
 
@@ -94,7 +94,7 @@ Before we move forward with a refund, here are a few steps that help ensure a cl
 
 These steps should give you the full results from X-All Foaming Toilet Cleaner. If things are still not looking right after trying them, let me know and I'll make sure we find the right solution.
 
-### Stains Not Removed
+### Stains Not Removed `ACTIVE`
 
 Before we move forward with a refund, here are a few steps that help X-All Foaming Toilet Cleaner tackle tougher stains:
 
@@ -104,7 +104,7 @@ Before we move forward with a refund, here are a few steps that help X-All Foami
 
 Older and deeper stains take more time than fresh ones, and X-All Foaming Toilet Cleaner is designed to break them down over repeated applications. If results are still falling short after trying these steps, let me know and I'll make sure we find the right solution.
 
-### Toilet Clogged
+### Toilet Clogged `ACTIVE`
 
 Before we move forward with a refund, I want to make sure we get to the bottom of this. X-All Foaming Toilet Cleaner is designed to dissolve safely in water and should not cause clogs when used as directed. Here are a few steps that help prevent and resolve plumbing slowdowns:
 
@@ -114,7 +114,7 @@ Before we move forward with a refund, I want to make sure we get to the bottom o
 
 If there was already a partial blockage before using the product, the foam may have loosened existing buildup that was restricting flow. A warm water flush should help clear that out. If the issue continues after trying these steps, let me know and I'll make sure we find the right solution.
 
-### Skin Irritation
+### Skin Irritation `ACTIVE`
 
 Before we move forward with a refund, here are a few precautions that help minimize skin contact when using X-All Foaming Toilet Cleaner:
 
@@ -125,7 +125,7 @@ Before we move forward with a refund, here are a few precautions that help minim
 
 X-All Foaming Toilet Cleaner is bleach-free and made from non-toxic, biodegradable ingredients, but skin sensitivity can vary. These steps should help make the process more comfortable. If the concern continues after trying them, let me know and I'll make sure we find the right solution.
 
-### Scent Concern
+### Scent Concern `ACTIVE`
 
 Before we move forward with a refund, I want to make sure you have the full picture on the scent in X-All Foaming Toilet Cleaner:
 
@@ -135,7 +135,7 @@ Before we move forward with a refund, I want to make sure you have the full pict
 
 The cleaning power of the product is not affected by ventilation, and the formula is safe around pets and family regardless of how strong the scent may seem during activation. If the concern continues after trying these steps, let me know and I'll make sure we find the right solution.
 
-### Powder Clumping
+### Powder Clumping `ACTIVE`
 
 Before we move forward with a refund, here are a few things to know about powder clumping in X-All Foaming Toilet Cleaner:
 
@@ -151,7 +151,7 @@ This is a cosmetic issue with the powder texture, not a product quality issue. T
 
 L3 fires when L2 has been served and declined. The goal is to retain the sale by offering free products. Routing software selects one of the three bundle options below. Each option is self-contained — no cross-referencing between bundles.
 
-## Fresh Start Bundle
+### Fresh Start Bundle `ACTIVE`
 
 Instead of a refund, I'd like to offer you something. Keep your current order and enjoy a Fresh Start Bundle on us:
 
@@ -163,7 +163,7 @@ That's **nearly $90 in value, at no cost to you.** We're willing to invest in th
 
 If this sounds good, just reply **YES** and I'll get the bundle processed right away. No returns, no restocking fees, no hassle.
 
-## Whole-Home Rescue Kit
+### Whole-Home Rescue Kit `ACTIVE`
 
 Instead of a refund, I'd like to offer you something. Keep your current order and receive a Whole-Home Rescue Kit on us:
 
@@ -176,7 +176,7 @@ That's **nearly $130 in value, at no cost to you.** We're willing to invest in t
 
 If this sounds good, just reply **YES** and I'll get the kit processed right away. No returns, no restocking fees, no hassle.
 
-## Mega-Sparkle Offer
+### Mega-Sparkle Offer `ACTIVE`
 
 Instead of a refund, I'd like to offer you something. Keep your current order and enjoy our Mega-Sparkle Offer on us:
 
@@ -198,4 +198,4 @@ If this sounds good, just reply **YES** and I'll get everything processed right 
 
 ---
 
-*X-All Foaming Toilet Cleaner | Active Responses — Deployment Reference | March 2026*
+*X-All Foaming Toilet Cleaner | Response Library — All Options | March 2026*
