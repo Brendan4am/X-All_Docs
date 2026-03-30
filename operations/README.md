@@ -8,7 +8,9 @@ This folder contains operational documentation for deployed AI agent systems —
 
 | File | Description |
 |---|---|
+| `nova-new-product-sop.md` | Brand-agnostic SOP for onboarding new brands and products into Nova — checklist-driven, covers brand-level and product-level deliverables |
 | `xall-nova-sop.md` | Human team SOPs for coordinating with the Nova AI agent on X-All support tickets |
+| `xall-brand-config.md` | X-All brand configuration — sign-off details, formatting agent behavior, brand-level defaults |
 
 ---
 
@@ -20,6 +22,8 @@ This folder covers the **human side** of the human + AI workflow:
 - Tag definitions and what they signal
 - Escalation handling procedures
 - Timing and coordination rules
+- Brand-level configuration (sign-offs, formatting agent behavior)
+- Onboarding SOPs for new brands and products
 
 This folder does **not** cover:
 

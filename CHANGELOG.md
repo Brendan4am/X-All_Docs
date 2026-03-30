@@ -6,6 +6,39 @@ Format: `## YYYY-MM-DD — [SCOPE] Summary`
 
 ---
 
+## 2026-03-30 — [MULTI] Add onboarding SOP, brand config, and issue triggers scaffolds
+
+**File(s) changed:** `operations/nova-new-product-sop.md`, `operations/xall-brand-config.md`, 7 issue-trigger files, `refund-pushback/README.md`, `operations/README.md`, `README.md`, `CHANGELOG.md`
+**Changed by:** AI Agent (Claude, acting as proxy for Brendan)
+
+### What changed
+- Created `operations/nova-new-product-sop.md` — brand-agnostic SOP for onboarding new brands/products into Nova. Includes:
+  - Brand vs product scope table (knowledge base, sign-offs, classification, architecture at brand level; L1–L5 content, issue triggers at product level)
+  - Layer summary (L1–L5)
+  - File structure per product (3 files: response library, active responses, issue triggers)
+  - Phased onboarding checklist (brand setup → product setup → validation) with checkboxes for agent tracking
+- Created `operations/xall-brand-config.md` — X-All brand-level config: sign-off details (TBD, flagged for confirmation), formatting agent behavior, brand identity
+- Created issue-trigger scaffolds in all 7 product subfolders:
+  - `foaming-toilet-cleaner/xall-toilet-issue-triggers.md` — 7 issues + default listed (triggers pending)
+  - `multi-purpose-spray/xall-spray-issue-triggers.md` — scaffold (default only)
+  - `washing-machine-cleaner/xall-washer-issue-triggers.md` — scaffold
+  - `dishwasher-cleaner/xall-dishwasher-issue-triggers.md` — scaffold
+  - `power-scrubber/xall-scrubber-issue-triggers.md` — scaffold
+  - `air-pure-purifier/xall-airpure-issue-triggers.md` — scaffold
+  - `subscription/xall-subscription-issue-triggers.md` — scaffold
+- Updated `refund-pushback/README.md`: folder structure now shows 3 files per product (added issue triggers), updated synced files section, added relational constraint documentation
+- Updated `operations/README.md`: added new files to file table, expanded scope
+- Updated `README.md`: repo structure tree includes all new files, documents-at-a-glance table updated
+
+### Why
+The SOP from `SOP_New_Product_Line.md` needed adaptation to match the repo's 5-layer system (L1–L5), brand vs product scoping, and file conventions. Issue triggers establish the relational link between customer-reported problems and L2 pushback buckets. Brand config gives sign-offs a home outside refund-pushback since they apply to all customer communications.
+
+### Review flags
+- [Flag added] `operations/xall-brand-config.md` — sign-off name and role TBD, awaiting stakeholder confirmation
+- [Flag added] `foaming-toilet-cleaner/xall-toilet-issue-triggers.md` — issue names populated from existing L2 buckets, routing trigger definitions pending
+
+---
+
 ## 2026-03-30 — [MULTI] Duplicate L1 Ask Why macro across all product tracks
 
 **File(s) changed:** 12 files across 6 product track subfolders (active-responses + response-library for each), `CHANGELOG.md`

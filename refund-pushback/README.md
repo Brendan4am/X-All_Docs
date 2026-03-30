@@ -16,34 +16,46 @@ refund-pushback/
 │
 ├── foaming-toilet-cleaner/                                    ← Foaming Toilet Cleaner ($39.95) pushback track
 │   ├── xall-toilet-response-library.md                        ← Full option library — all macros with ACTIVE/RESERVE markers
-│   └── xall-toilet-active-responses.md                        ← Deployed macros only — what Nova serves to customers
+│   ├── xall-toilet-active-responses.md                        ← Deployed macros only — what Nova serves to customers
+│   └── xall-toilet-issue-triggers.md                          ← Issue names + routing triggers (relational to L2 buckets)
 │
 ├── multi-purpose-spray/                                       ← Multi-Purpose Spray ($39.95) pushback track
 │   ├── xall-spray-response-library.md                         ← Full option library — all macros with ACTIVE/RESERVE markers
-│   └── xall-spray-active-responses.md                         ← Deployed macros only — what Nova serves to customers
+│   ├── xall-spray-active-responses.md                         ← Deployed macros only — what Nova serves to customers
+│   └── xall-spray-issue-triggers.md                           ← Issue names + routing triggers (relational to L2 buckets)
 │
 ├── washing-machine-cleaner/                                   ← Washing Machine Cleaner ($39.95) pushback track
 │   ├── xall-washer-response-library.md                        ← Full option library — all macros with ACTIVE/RESERVE markers
-│   └── xall-washer-active-responses.md                        ← Deployed macros only — what Nova serves to customers
+│   ├── xall-washer-active-responses.md                        ← Deployed macros only — what Nova serves to customers
+│   └── xall-washer-issue-triggers.md                          ← Issue names + routing triggers (relational to L2 buckets)
 │
 ├── dishwasher-cleaner/                                        ← Dishwasher Cleaner ($39.95) pushback track
 │   ├── xall-dishwasher-response-library.md                    ← Full option library — all macros with ACTIVE/RESERVE markers
-│   └── xall-dishwasher-active-responses.md                    ← Deployed macros only — what Nova serves to customers
+│   ├── xall-dishwasher-active-responses.md                    ← Deployed macros only — what Nova serves to customers
+│   └── xall-dishwasher-issue-triggers.md                      ← Issue names + routing triggers (relational to L2 buckets)
 │
 ├── power-scrubber/                                            ← Power Scrubber ($79.95) pushback track
 │   ├── xall-scrubber-response-library.md                      ← Full option library — all macros with ACTIVE/RESERVE markers
-│   └── xall-scrubber-active-responses.md                      ← Deployed macros only — what Nova serves to customers
+│   ├── xall-scrubber-active-responses.md                      ← Deployed macros only — what Nova serves to customers
+│   └── xall-scrubber-issue-triggers.md                        ← Issue names + routing triggers (relational to L2 buckets)
 │
 ├── air-pure-purifier/                                         ← Air Pure Purifier ($79.95) pushback track
 │   ├── xall-airpure-response-library.md                       ← Full option library — all macros with ACTIVE/RESERVE markers
-│   └── xall-airpure-active-responses.md                       ← Deployed macros only — what Nova serves to customers
+│   ├── xall-airpure-active-responses.md                       ← Deployed macros only — what Nova serves to customers
+│   └── xall-airpure-issue-triggers.md                         ← Issue names + routing triggers (relational to L2 buckets)
 │
 └── subscription/                                              ← Subscription (unified across all products) pushback track
     ├── xall-subscription-response-library.md                  ← Full option library — all macros with ACTIVE/RESERVE markers
-    └── xall-subscription-active-responses.md                  ← Deployed macros only — what Nova serves to customers
+    ├── xall-subscription-active-responses.md                  ← Deployed macros only — what Nova serves to customers
+    └── xall-subscription-issue-triggers.md                    ← Issue names + routing triggers (relational to L2 buckets)
 ```
 
-Each product subfolder contains a **synced pair**: the response library (all options with ACTIVE/RESERVE markers) and the active responses file (deployed macros only — the subset Nova actually serves to customers).
+Each product subfolder contains **3 files**:
+- **Response library** — all macro options with ACTIVE/RESERVE markers
+- **Active responses** — deployed macros only (the subset Nova serves to customers)
+- **Issue triggers** — maps customer-reported issues to L2 buckets (relational — 1:1 with L2 buckets in active responses)
+
+For the onboarding process to set up a new product, see `operations/nova-new-product-sop.md`.
 
 ---
 
@@ -110,9 +122,9 @@ The following values require **explicit human confirmation** before any change. 
 
 ---
 
-## Synced File Pairs
+## Synced Files
 
-Each product track and the subscription track has a synced pair inside its subfolder. Always edit the **response library first**, then propagate to the active responses file in the same commit.
+Each product subfolder has 3 files that must stay in sync. Always edit the **response library first**, then propagate to the active responses file in the same commit. Issue triggers must match L2 buckets 1:1.
 
 | Track Folder | Source File (Library) | Synced Copy (Active) | Sync Rule |
 |---|---|---|---|
@@ -124,11 +136,12 @@ Each product track and the subscription track has a synced pair inside its subfo
 | `air-pure-purifier/` | `xall-airpure-response-library.md` | `xall-airpure-active-responses.md` | Same as above. |
 | `subscription/` | `xall-subscription-response-library.md` | `xall-subscription-active-responses.md` | Same as above. |
 
-### Macro content rules
+### Content rules
 
-- When changing which option is active: update both files in the same commit. Change the marker in the library, swap the macro in the active file.
-- When editing the text of an active macro: update both files in the same commit.
+- When changing which option is active: update both library and active files in the same commit.
+- When editing the text of an active macro: update both library and active files in the same commit.
 - When adding or editing a reserve option: update the library file only.
+- When adding or removing an L2 issue: update the issue triggers file AND the response library AND the active responses file in the same commit.
 - Consult the cs-macro-standards skill before making any content changes.
 - Currently approved dynamic placeholders: `[REFUND_AMOUNT]` (Terminal Layer)
 

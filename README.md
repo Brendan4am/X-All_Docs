@@ -24,35 +24,44 @@ Operational documentation for X-All customer service systems. Maintained collabo
 │   │
 │   ├── foaming-toilet-cleaner/                        ← Foaming Toilet Cleaner ($39.95) pushback track
 │   │   ├── xall-toilet-response-library.md            ← Full option library — all macros with ACTIVE/RESERVE markers
-│   │   └── xall-toilet-active-responses.md            ← Deployed macros — what Nova serves to customers
+│   │   ├── xall-toilet-active-responses.md            ← Deployed macros — what Nova serves to customers
+│   │   └── xall-toilet-issue-triggers.md              ← Issue names + routing triggers (relational to L2 buckets)
 │   │
 │   ├── multi-purpose-spray/                           ← Multi-Purpose Spray ($39.95) pushback track
 │   │   ├── xall-spray-response-library.md             ← Full option library — all macros with ACTIVE/RESERVE markers
-│   │   └── xall-spray-active-responses.md             ← Deployed macros — what Nova serves to customers
+│   │   ├── xall-spray-active-responses.md             ← Deployed macros — what Nova serves to customers
+│   │   └── xall-spray-issue-triggers.md               ← Issue names + routing triggers (relational to L2 buckets)
 │   │
 │   ├── washing-machine-cleaner/                       ← Washing Machine Cleaner ($39.95) pushback track
 │   │   ├── xall-washer-response-library.md            ← Full option library — all macros with ACTIVE/RESERVE markers
-│   │   └── xall-washer-active-responses.md            ← Deployed macros — what Nova serves to customers
+│   │   ├── xall-washer-active-responses.md            ← Deployed macros — what Nova serves to customers
+│   │   └── xall-washer-issue-triggers.md              ← Issue names + routing triggers (relational to L2 buckets)
 │   │
 │   ├── dishwasher-cleaner/                            ← Dishwasher Cleaner ($39.95) pushback track
 │   │   ├── xall-dishwasher-response-library.md        ← Full option library — all macros with ACTIVE/RESERVE markers
-│   │   └── xall-dishwasher-active-responses.md        ← Deployed macros — what Nova serves to customers
+│   │   ├── xall-dishwasher-active-responses.md        ← Deployed macros — what Nova serves to customers
+│   │   └── xall-dishwasher-issue-triggers.md          ← Issue names + routing triggers (relational to L2 buckets)
 │   │
 │   ├── power-scrubber/                                ← Power Scrubber ($79.95) pushback track
 │   │   ├── xall-scrubber-response-library.md          ← Full option library — all macros with ACTIVE/RESERVE markers
-│   │   └── xall-scrubber-active-responses.md          ← Deployed macros — what Nova serves to customers
+│   │   ├── xall-scrubber-active-responses.md          ← Deployed macros — what Nova serves to customers
+│   │   └── xall-scrubber-issue-triggers.md            ← Issue names + routing triggers (relational to L2 buckets)
 │   │
 │   ├── air-pure-purifier/                             ← Air Pure Purifier ($79.95) pushback track
 │   │   ├── xall-airpure-response-library.md           ← Full option library — all macros with ACTIVE/RESERVE markers
-│   │   └── xall-airpure-active-responses.md           ← Deployed macros — what Nova serves to customers
+│   │   ├── xall-airpure-active-responses.md           ← Deployed macros — what Nova serves to customers
+│   │   └── xall-airpure-issue-triggers.md             ← Issue names + routing triggers (relational to L2 buckets)
 │   │
 │   └── subscription/                                  ← Subscription (unified across all products) pushback track
 │       ├── xall-subscription-response-library.md      ← Full option library — all macros with ACTIVE/RESERVE markers
-│       └── xall-subscription-active-responses.md      ← Deployed macros — what Nova serves to customers
+│       ├── xall-subscription-active-responses.md      ← Deployed macros — what Nova serves to customers
+│       └── xall-subscription-issue-triggers.md        ← Issue names + routing triggers (relational to L2 buckets)
 │
 ├── operations/
 │   ├── README.md                                      ← Operations-specific rules and scope
-│   └── xall-nova-sop.md                               ← Human team SOPs for Nova AI agent coordination
+│   ├── nova-new-product-sop.md                        ← Brand-agnostic SOP for onboarding new products into Nova
+│   ├── xall-nova-sop.md                               ← Human team SOPs for Nova AI agent coordination
+│   └── xall-brand-config.md                           ← Sign-off details, formatting agent behavior, brand defaults
 │
 └── skills/
     ├── README.md                                      ← Skill index and usage guide
@@ -92,7 +101,9 @@ Files with an `xall-` prefix are specific to X-All. Files without a prefix are a
 | `refund-pushback/xall-architecture.md` | System design — layer flow, routing logic, per-product tracks | System reference |
 | `refund-pushback/xall-classification-prompt.md` | Intake classifier prompt — Product Refund / Subscription / Fallback | AI classifier |
 | `operations/README.md` | Operations scope and coordination rules | Agents editing ops |
+| `operations/nova-new-product-sop.md` | Brand-agnostic SOP for onboarding new brands/products into Nova | All agents, onboarding |
 | `operations/xall-nova-sop.md` | Human team SOPs for Nova AI agent coordination | Human CS team |
+| `operations/xall-brand-config.md` | Sign-off details, formatting agent config, brand-level defaults | Formatting agent, human team |
 | `skills/cs-macro-standards/SKILL.md` | Macro writing framework — mandatory for all macro work | All macro authors |
 
 ---
